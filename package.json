@@ -1,0 +1,25 @@
+{
+  "name": "interactive-ganja",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/rollup -c && node_modules/.bin/copyfiles index.html build",
+    "serve": "node_modules/.bin/serve ./build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "copyfiles": "^2.4.1",
+    "rollup": "^3.29.3"
+  },
+  "dependencies": {
+    "@codemirror/lang-javascript": "^6.2.1",
+    "codemirror": "^6.0.1",
+    "ganja.js": "^1.0.204",
+    "serve": "^14.2.1"
+  }
+}
