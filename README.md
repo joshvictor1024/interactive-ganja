@@ -7,9 +7,9 @@ Minimal geometric algebra visualization playground powered by:
 
 ## Usage
 
-When cloning this repo for the first time, run `npm i`.
+When cloning this repo for the first time, run `npm i` and run `npm run build`.
 
-To run the server locally, run `npm run-script serve`. This should serve `index.html` at `http://localhost:3000/`, which you can connect to in your browser.
+To run the server locally, run `npm run serve`. This should serve `index.html` at `http://localhost:3000/`, which you can connect to in your browser.
 
 In the code editor, a `replaceCanvas()` function is exposed for your use.
 

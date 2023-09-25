@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node_modules/.bin/rollup -c && node_modules/.bin/copyfiles index.html build",
-    "serve": "node_modules/.bin/serve ./build",
+    "build": "npx rollup -c && npx copyfiles index.html build",
+    "clean": "rm -r build",
+    "serve": "npx serve ./build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
