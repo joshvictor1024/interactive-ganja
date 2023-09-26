@@ -2,8 +2,8 @@ import { EditorView, basicSetup } from "codemirror"
 import { javascript } from "@codemirror/lang-javascript"
 
 import { replaceCanvas } from "./util";
-// import { torus } from "./examples/torus";
-import { poncelet } from "./examples/poncelet";
+// import { torus } from "./demo/torus";
+import { poncelet } from "./demo/poncelet";
 
 let div = document.getElementById("my-div");
 let myCanvas = document.createElement("canvas");
