@@ -11,19 +11,28 @@ You need `npm >= 5.2.0` and `node >= 14.18.0`. After cloning this repo, run `npm
 
 ## Development
 
-Edit `./index.html` and `./src/*`. Run `npm run build` to generate new files from the modified source files.
+The framework of this playground is made up of `./index.html`, `./src/index.js`, and `./src/util.js`. Edit these files to alter its functionalities.
 
-## Run
+Demos are given in `src/demo/`. One of them can be set to be displayed on page load, specified in `index.js`.
+
+Since a bundler is used, every time changes are made, you need to run `npm run build`. This generates new files from the modified source files, and transfer them to the `build/` to be served.
+
+## Serve
 
 Run `npm run build` first if you haven't done that before.
 
 To run the server locally, run `npm run serve`. This should serve `index.html` at `http://localhost:3000/`, which you can connect to with your browser.
 
-The simple webpage has a CodeMirror code editor. Paste the ganja code you want to run into the code editor, then press "Run" to run code. Press "Clear" to clear the canvas.
 
-You will notice that after clicking "Run", a new area is appended to the end of the webpage, which is not what we want. Continue reading for a recommended solution.
+## Using the integrated editor
 
-### Examples
+This simple webpage has a CodeMirror code editor. Write `ganja.js` code in the code editor, then press "Run" to run code. Press "Clear" to clear the canvas.
+
+If you are new with `ganja.js`, we recommend that you take a look on [The CoffeeShop](https://enkimute.github.io/ganja.js/examples/coffeeshop.html), the official site hosting code examples.
+
+Unfortunately, if you paste code from The CoffeeShop directly into the editor, you may face several issues, though all of them are easy to solve. Read on for instructions on how to modify your code.
+
+### Spawning the graphical element
 
 Take this example from [The CoffeeShop](https://enkimute.github.io/ganja.js/examples/coffeeshop.html#pga3d_points_and_lines):
 
@@ -104,3 +113,12 @@ let canvas = Algebra(3,0,1,()=>{
 // Exposed function for your use.
 replaceCanvas(canvas);
 ```
+
+### 3D examples
+
+When viewing 3D examples, you can manipulate the camera with your mouse. However, you need to specify the width and height of the returned graphical element. For example, in the previous example:
+```js
+return this.graph([0x0000ff,torus,0xff0000,c3],{gl:true, width:'100%', height:'400px'})
+```
+
+If you don't specify `width` and `height`, the dimension of the graphical element may change unexpectedly when you attempt to interact with it.
