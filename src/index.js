@@ -3,16 +3,16 @@ import { javascript } from "@codemirror/lang-javascript"
 
 import { replaceCanvas } from "./util";
 // import { torus } from "./demo/torus";
-import { poncelet } from "./demo/poncelet";
+// import { poncelet } from "./demo/poncelet";
+import { serial_ik } from "./demo/serial-ik";
 
 let div = document.getElementById("my-div");
 let myCanvas = document.createElement("canvas");
 div.appendChild(myCanvas);
 
-window.replaceCanvas = replaceCanvas;
-
 // torus();
-poncelet();
+// poncelet();
+serial_ik();
 
 let editor = new EditorView({
   extensions: [basicSetup, javascript()],
